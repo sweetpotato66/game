@@ -51,3 +51,23 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+.myButton {
+	background-color:#23b3b8;
+	border-radius:28px;
+	border:1px solid #82fff9;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #58e6f0;
+}
+.myButton:hover {
+	background-color:#7be9f7;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

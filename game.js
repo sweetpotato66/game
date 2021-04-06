@@ -12,7 +12,7 @@ $(document).keypress(function() {
   }
 });
 
-$("#level-title").on("click", function(){
+$(".myButton").on("click", function(){
   $("#level-title").text("Level " + level);
   nextSequence();
   levelStart = true;
@@ -42,12 +42,13 @@ function checkAnswer(currentLevel) {
     setTimeout(function() {
       $("body").removeClass("game-over");
     }, 200);
-    $("#level-title").text("Game Over, TANGA MO. Press any Key to Restart");
+    $("#level-title").text("TANGA MO. Press any Key or the Button to Restart");
     startOver();
   }
 }
 
 function nextSequence() {
+  $(".myButton").hide();
   userClickedPattern = [];
   level++;
   $("#level-title").text("Level " + level);
@@ -72,6 +73,7 @@ function animatePress(currentColor) {
 }
 
 function startOver() {
+  $(".myButton").show().text("RETRY");
   level = 0;
   gamePattern = [];
   levelStart = false;
